@@ -1,0 +1,113 @@
+.app {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 6px;
+  background: rgb(83, 6, 128);
+  background: linear-gradient(
+    45deg,
+    rgba(83, 6, 128, 1) 10%,
+    rgba(231, 188, 255, 1) 100%
+  );
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #333;
+  font-family: "Courier New", "Courier", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.numbers {
+  height: 113px;
+  position: relative;
+  display: block;
+}
+
+.numbers .number-one-1 {
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+  left: -24px;
+  top: 11px;
+  height: 20px;
+  width: 42px;
+  transform: rotate(-45deg);
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.numbers .number-one-2 {
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+  left: 1px;
+  height: 105px;
+  width: 24px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.numbers .number-zero-1 {
+  background: transparent;
+  position: absolute;
+  left: 18px;
+  height: 57px;
+  width: 57px;
+  border-radius: 50%;
+  border: 24px solid #fff;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.numbers .number-zero-2 {
+  background: transparent;
+  position: absolute;
+  left: 105px;
+  height: 57px;
+  width: 57px;
+  border-radius: 50%;
+  border: 24px solid #fff;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.big-text {
+  color: #fff;
+  font-size: 84px;
+  font-family: "Courier New", "Courier", sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 0.7;
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.small-text {
+  color: #fff;
+  font-size: 24px;
+  font-family: "Courier New", "Courier", sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1;
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+}
