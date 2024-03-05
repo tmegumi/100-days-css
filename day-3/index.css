@@ -1,0 +1,182 @@
+:root {
+  --animation-pyramid: cubic-bezier(0.4, 0, 0.4, 1);
+  --animation-time: 4s;
+}
+
+.app {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 6px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #0f172a;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  clip-path: circle(50%);
+  background: #85ecfa;
+  position: relative;
+  height: 180px;
+  width: 180px;
+  animation: container-darkening var(--animation-time) var(--animation-pyramid)
+    infinite;
+}
+
+.pyramid-left {
+  background: #fafafa;
+  clip-path: polygon(50% 0%, 0% 100%, 99% 100%);
+  height: 54px;
+  width: 100px;
+  bottom: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  animation: pyramid-darkening var(--animation-time) var(--animation-pyramid)
+    infinite;
+}
+
+.pyramid-right {
+  background: #a1a1aa;
+  clip-path: polygon(50% 0%, 69% 100%, 100% 100%);
+  height: 54px;
+  width: 100px;
+  bottom: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  animation: pyramid-darkening var(--animation-time) var(--animation-pyramid)
+    infinite reverse;
+}
+
+.pyramid-shadow {
+  background: rgba(0, 0, 0, 0.2);
+  clip-path: polygon(100px 0%, 196px 0%, 100% 100%);
+  height: 54px;
+  width: 360px;
+  top: 125px;
+  left: -58px;
+  position: absolute;
+  transform-origin: 50% 0%;
+  animation: pyramid-shadow-moving var(--animation-time)
+    var(--animation-pyramid) infinite;
+  z-index: 1;
+}
+
+.sun {
+  background: #facc15;
+  height: 32px;
+  width: 32px;
+  top: 7px;
+  left: 73px;
+  position: absolute;
+  border-radius: 50%;
+  transform-origin: 50% 400%;
+  animation: sun-moving var(--animation-time) var(--animation-pyramid) infinite;
+}
+
+.sand {
+  position: absolute;
+  background: #fde68a;
+  bottom: 1px;
+  height: 54px;
+  width: 180px;
+}
+
+@keyframes container-darkening {
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pyramid-darkening {
+  0% {
+    background: #fafafa;
+  }
+
+  30% {
+    background: #f4f4f5;
+  }
+
+  80% {
+    background: #d4d4d8;
+  }
+
+  100% {
+    background: #a1a1aa;
+  }
+}
+
+@keyframes pyramid-shadow-moving {
+  0% {
+    transform: scaleY(0);
+    clip-path: polygon(100px 0%, 196px 0%, 100% 100%);
+  }
+
+  30% {
+    transform: scaleY(1);
+    clip-path: polygon(100px 0%, 196px 0%, 80% 100%);
+  }
+
+  60% {
+    transform: scaleY(0.4);
+  }
+
+  80% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(0);
+    clip-path: polygon(100px 0%, 196px 0%, 0% 100%);
+  }
+}
+
+@keyframes sun-moving {
+  0% {
+    background: #f97316;
+    transform: rotate(-70deg);
+  }
+
+  30% {
+    background: #facc15;
+    transform: rotate(-28deg);
+  }
+
+  70% {
+    background: #facc15;
+  }
+
+  100% {
+    background: #facc15;
+    transform: rotate(70deg);
+  }
+}
