@@ -1,0 +1,124 @@
+:root {
+  --circle-animation: cubic-bezier(0.3, 0.78, 0.17, 1);
+}
+
+.app {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 6px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #86198f;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  position: relative;
+}
+
+.bg-circle {
+  background: #fff;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 0 0;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4);
+  animation: bg-circle-animation 2s var(--circle-animation) infinite alternate;
+  animation-fill-mode: both;
+}
+
+.md-circle {
+  background: #fff;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 0 0;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4);
+  animation: md-circle-animation 2s var(--circle-animation) infinite alternate;
+  animation-fill-mode: both;
+}
+
+.sm-circle {
+  background: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 0 0;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4);
+  animation: sm-circle-animation 2s var(--circle-animation) infinite alternate;
+  animation-fill-mode: both;
+}
+
+@keyframes bg-circle-animation {
+  0% {
+    transform: scale(0) translate(-50%, -50%);
+  }
+
+  30% {
+    transform: scale(0) translate(-50%, -50%);
+  }
+
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+@keyframes md-circle-animation {
+  0% {
+    transform: scale(0) translate(-50%, -50%);
+  }
+
+  50% {
+    transform: scale(0) translate(-50%, -50%);
+  }
+
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+@keyframes sm-circle-animation {
+  0% {
+    transform: scale(0) translate(-50%, -50%);
+  }
+
+  70% {
+    transform: scale(0) translate(-50%, -50%);
+  }
+
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
