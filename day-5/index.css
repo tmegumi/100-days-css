@@ -1,0 +1,322 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+:root {
+  --views-color: #d946ef;
+  --purchases-color: #0ea5e9;
+}
+
+.app {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 6px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #0891b2;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.panel {
+  background: #fafafa;
+  border-radius: 4px;
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.3);
+  height: 220px;
+  width: 260px;
+}
+
+.panel-header {
+  background: #1f2937;
+  color: #f8fafc;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  width: 70%;
+}
+
+.description .title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 0.8;
+}
+
+.description .date {
+  font-size: 9px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 0.8;
+}
+
+.total {
+  text-align: right;
+}
+
+.total .title {
+  font-size: 9px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  display: block;
+}
+
+.total .value {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.legend {
+  color: #0f172a;
+  font-size: 9px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px;
+}
+
+.legend .legend-views {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.legend .legend-views > div {
+  background-color: var(--views-color);
+  margin-right: 8px;
+  border-radius: 4px;
+  height: 4px;
+  width: 12px;
+}
+
+.legend .legend-purchases {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.legend .legend-purchases > div {
+  background-color: var(--purchases-color);
+  margin-right: 8px;
+  border-radius: 4px;
+  height: 4px;
+  width: 12px;
+}
+
+.chart-views,
+.chart-purchases {
+  border-top: 1px solid #e2e8f0;
+  box-sizing: border-box;
+  height: 40px;
+  width: 93%;
+  margin: 0 auto;
+}
+
+.chart-purchases {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.chart-views svg,
+.chart-purchases svg {
+  position: absolute;
+}
+
+.chart-views polyline {
+  fill: none;
+  stroke: var(--views-color);
+  stroke-width: 2;
+}
+
+.chart-purchases polyline {
+  fill: none;
+  stroke: var(--purchases-color);
+  stroke-width: 2;
+}
+
+.line-chart {
+  list-style: none;
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.line-chart li {
+  border-radius: 50%;
+  height: 6px;
+  position: absolute;
+  width: 6px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.chart-views .line-chart li {
+  background-color: var(--views-color);
+}
+
+.chart-purchases .line-chart li {
+  background-color: var(--purchases-color);
+}
+
+.chart-views .line-chart .point-1 {
+  top: 42px;
+  left: 6px;
+}
+
+.chart-views .line-chart .point-2 {
+  top: 8px;
+  left: 43px;
+}
+
+.chart-views .line-chart .point-3 {
+  top: 20px;
+  left: 80px;
+}
+
+.chart-views .line-chart .point-4 {
+  top: 8px;
+  left: 117px;
+}
+
+.chart-views .line-chart .point-5 {
+  top: 34px;
+  left: 154px;
+}
+
+.chart-views .line-chart .point-6 {
+  top: 47px;
+  left: 191px;
+}
+
+.chart-views .line-chart .point-7 {
+  top: 17px;
+  left: 228px;
+}
+
+.chart-purchases .line-chart .point-1 {
+  top: 18px;
+  left: 6px;
+}
+
+.chart-purchases .line-chart .point-2 {
+  top: 6px;
+  left: 43px;
+}
+
+.chart-purchases .line-chart .point-3 {
+  top: 18px;
+  left: 80px;
+}
+
+.chart-purchases .line-chart .point-4 {
+  top: 10px;
+  left: 117px;
+}
+
+.chart-purchases .line-chart .point-5 {
+  top: 16px;
+  left: 154px;
+}
+
+.chart-purchases .line-chart .point-6 {
+  top: 27px;
+  left: 191px;
+}
+
+.chart-purchases .line-chart .point-7 {
+  top: 18px;
+  left: 228px;
+}
+
+.line-chart li:hover .tooltip {
+  opacity: 1;
+  bottom: 12px;
+}
+
+.tooltip {
+  opacity: 0;
+  height: max-content;
+  width: max-content;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #f8fafc;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.4s ease, bottom 0.4s ease;
+}
+
+.tooltip:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  bottom: -4px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.chart-views .line-chart .tooltip {
+  background: var(--views-color);
+}
+
+.chart-views .line-chart .tooltip:after {
+  border-top: 4px solid var(--views-color);
+}
+
+.chart-purchases .line-chart .tooltip {
+  background: var(--purchases-color);
+}
+
+.chart-purchases .line-chart .tooltip:after {
+  border-top: 4px solid var(--purchases-color);
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.footer > div {
+  color: #1e293b;
+  font-size: 9px;
+  text-transform: uppercase;
+}

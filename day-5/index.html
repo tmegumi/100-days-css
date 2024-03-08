@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="../scripts/jquery-3-7-1.min.js"></script>
+    <script src="index.js"></script>
+
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="frame">
+        <div class="center">
+          <div class="panel">
+            <div class="panel-header">
+              <div class="description">
+                <h1 class="title">Weekly Report</h1>
+                <h2 class="date">01. Feb - 07. Feb</h2>
+              </div>
+              <div class="total">
+                <span class="title">Revenue</span>
+                <span class="value">$ 3621.79</span>
+              </div>
+            </div>
+            <div class="panel-content">
+              <div class="legend">
+                <div class="legend-views">
+                  <div></div>
+                  Views
+                </div>
+                <div class="legend-purchases">
+                  <div></div>
+                  Purchases
+                </div>
+              </div>
+              <figure class="chart-views">
+                <svg
+                  height="210"
+                  width="500"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="8 45,46 11,83 23,120 10,157 37,194 50,230 20"
+                  />
+                </svg>
+                <ul class="line-chart">
+                  <li class="point-1">
+                    <div class="tooltip">458</div>
+                  </li>
+                  <li class="point-2">
+                    <div class="tooltip">812</div>
+                  </li>
+                  <li class="point-3">
+                    <div class="tooltip">746</div>
+                  </li>
+                  <li class="point-4">
+                    <div class="tooltip">877</div>
+                  </li>
+                  <li class="point-5">
+                    <div class="tooltip">517</div>
+                  </li>
+                  <li class="point-6">
+                    <div class="tooltip">434</div>
+                  </li>
+                  <li class="point-7">
+                    <div class="tooltip">458</div>
+                  </li>
+                </ul>
+              </figure>
+              <figure class="chart-purchases">
+                <svg
+                  height="210"
+                  width="500"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polyline
+                    points="8 21,46 9,83 21,120 13,157 19,194 30,230 21"
+                  />
+                </svg>
+                <ul class="line-chart">
+                  <li class="point-1">
+                    <div class="tooltip">26</div>
+                  </li>
+                  <li class="point-2">
+                    <div class="tooltip">41</div>
+                  </li>
+                  <li class="point-3">
+                    <div class="tooltip">22</div>
+                  </li>
+                  <li class="point-4">
+                    <div class="tooltip">36</div>
+                  </li>
+                  <li class="point-5">
+                    <div class="tooltip">25</div>
+                  </li>
+                  <li class="point-6">
+                    <div class="tooltip">13</div>
+                  </li>
+                  <li class="point-7">
+                    <div class="tooltip">20</div>
+                  </li>
+                </ul>
+              </figure>
+              <div class="footer">
+                <div>MON</div>
+                <div>TUE</div>
+                <div>WED</div>
+                <div>THU</div>
+                <div>FRI</div>
+                <div>SAT</div>
+                <div>SUN</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
